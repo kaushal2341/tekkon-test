@@ -1,0 +1,19 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 24
+    },
+    "auditLog": "logs\\.3bad92d45f02a3c1a8bb62a160a70dfaefb320c3-audit.json",
+    "files": [
+        {
+            "date": 1623261939163,
+            "name": "logs\\debugpayoks.2021-06-09-T21",
+            "hash": "e837da5d136b837fbb1ff2344b6d0b86"
+        },
+        {
+            "date": 1623262503649,
+            "name": "logs\\debugpayoks.2021-06-10-T00",
+            "hash": "f9c6b6c6c11d86b1081770af7d2832c2"
+        }
+    ]
+}

@@ -5,5 +5,5 @@ const { BASE_CONSTANTS } = UrlConstants;
 export default function (app) {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
-  app.use(BASE_CONSTANTS.BASE_URL + BASE_CONSTANTS.BASE_URL, Home);
+  app.use(BASE_CONSTANTS.BASE_URL + BASE_CONSTANTS.VERSION, Home);
 }
