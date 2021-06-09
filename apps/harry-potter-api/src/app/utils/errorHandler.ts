@@ -1,4 +1,4 @@
-import logger from '../logger/logger';
+
 import { ErrorMessage } from '@tekkon/api-services';
 
 export class HttpError extends Error {
@@ -21,7 +21,7 @@ const errorHandler = (err: any, req: any, res: any, next: any) => {
   if (res.headerSent) {
       return next(err);
   }
-  logger.error(err);
+  console.error(err);
   res.status(err.statusCode || 500);
   let message = null;
   try {

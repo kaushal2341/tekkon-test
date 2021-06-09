@@ -4,8 +4,10 @@
  */
 
 import * as express from 'express';
+import * as cors from 'cors';
 import {startupRoutes,databaseConnector} from './app/startup';
 const app = express();
+app.use(cors({ origin: '*' }))
 startupRoutes(app);
 databaseConnector();
 const port = process.env.port || 3001;

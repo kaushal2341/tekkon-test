@@ -24,6 +24,13 @@
     },
     "api-services": {
       "tags": []
+    },
+    "harry-potter-frontend": {
+      "tags": []
+    },
+    "harry-potter-frontend-e2e": {
+      "tags": [],
+      "implicitDependencies": ["harry-potter-frontend"]
     }
   }
 }
