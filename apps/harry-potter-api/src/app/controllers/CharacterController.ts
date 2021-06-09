@@ -1,14 +1,14 @@
 import { ErrorCode, ErrorMessage } from '@tekkon/api-services';
 import { HttpError } from '../utils/errorHandler';
 import { CharacterServices } from '../services';
-const lodash = require('lodash')
 export const listCharacter = async (req, res, next) => {
   try {
     const characters = await CharacterServices.listCharacters();
-    if (!characters.length) throw new HttpError(404, ErrorCode.PC01,ErrorMessage[ErrorCode.PC01]);
+    if (!characters.length)
+      throw new HttpError(404, ErrorCode.PC01, ErrorMessage[ErrorCode.PC01]);
     return res
       .status(200)
-      .send({ status: 200, message: 'Characters Fetched',characters});
+      .send({ status: 200, message: 'Characters Fetched', characters });
   } catch (err) {
     return next(err);
   }
