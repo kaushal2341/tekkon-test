@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test",
+    "start:backend": "nx serve harry-potter-api",
+    "build:backend": "nx build  harry-potter-api --production",
+    "test:backend": "nx test harry-potter-api",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",
