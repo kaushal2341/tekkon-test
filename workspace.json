@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/express"
+  },
+  "defaultProject": "harry-potter-api",
+  "projects": {
+    "harry-potter-api": {
+      "root": "apps/harry-potter-api",
+      "sourceRoot": "apps/harry-potter-api/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/harry-potter-api",
+            "main": "apps/harry-potter-api/src/main.ts",
+            "tsConfig": "apps/harry-potter-api/tsconfig.app.json",
+            "assets": ["apps/harry-potter-api/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/harry-potter-api/src/environments/environment.ts",
+                  "with": "apps/harry-potter-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "harry-potter-api:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/harry-potter-api/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/harry-potter-api"],
+          "options": {
+            "jestConfig": "apps/harry-potter-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}
