@@ -28,7 +28,11 @@
   "private": true,
   "dependencies": {
     "express": "4.17.1",
-    "tslib": "^2.0.0"
+    "morgan": "^1.10.0",
+    "morgan-json": "^1.1.0",
+    "tslib": "^2.0.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
   },
   "devDependencies": {
     "@nrwl/cli": "12.3.6",

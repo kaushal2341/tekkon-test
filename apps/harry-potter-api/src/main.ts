@@ -4,13 +4,9 @@
  */
 
 import * as express from 'express';
-
+import {startupRoutes} from './app/startup';
 const app = express();
-
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to harry-potter-api!' });
-});
-
+startupRoutes(app);
 const port = process.env.port || 3001;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
